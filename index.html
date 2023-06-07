@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+ 
+</head>
+<body>
+<main>
+  <div  class="container" id="ratingPanel">
+    <div id="starContain">    <img src="./images/icon-star.svg" alt="">
+    </div>
+    <h2>  How did we do?
+    </h2>
+    <h5> Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+    </h5>
+    <div id="rateContainer"><div id="1"  class="rate">1</div>
+    <div  id="2" class="rate">2</div>
+    <div  id="3" class="rate">3</div>
+    <div  id="4" class="rate">4</div>
+    <div  id="5" class="rate">5</div></div>
+    
+     <button id="submit">  Submit
+    </button>
+ </div>
+ <div class="container"  id="thankyou">
+  <div  class="thankyouSub"> <img src="./images/illustration-thank-you.svg" alt="">
+  </div>
+  <div id="thankyouSub2" class="thankyouSub">  
+    <div id="select">    You selected  <span id="selectedRating">0</span> out of 5
+    </div>
+    <h2>  Thank you!
+    </h2>
+     <h5>  We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</h5>
+  </div>
+ 
+  
+ </div>
+ 
+</div>
+  </main>
+  
+<footer>  <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Muhamamad Irtiza</a>.</footer>
+  
+
+  </div>
+  <script>
+          const btn = document.getElementById("submit");
+      
+          const thankspage= document.getElementById("thankyou") ;
+          btn.onclick = function () {
+      if (thankspage.style.display !== "block") {
+          thankspage.style.display = "block";
+      } 
+    };
+        
+    const btn1 = document.getElementById("1");
+    const btn2 = document.getElementById("2");
+    const btn3 = document.getElementById("3");
+    const btn4 = document.getElementById("4");
+    const btn5 = document.getElementById("5");
+   
+    btn1.onclick = function () {
+      document.getElementById("selectedRating").innerHTML = "1";
+    };
+    btn2.onclick = function () {
+      document.getElementById("selectedRating").innerHTML = "2";
+    };
+    btn3.onclick = function () {
+      document.getElementById("selectedRating").innerHTML = "3";
+    };
+    btn4.onclick = function () {
+      document.getElementById("selectedRating").innerHTML = "4";
+    };
+    btn5.onclick = function () {
+      document.getElementById("selectedRating").innerHTML = "5";
+    };
+  </script>  
+</body>
+</html>
